@@ -1,0 +1,6 @@
+@import '../../sass/partials/variables';
+@import '../../sass/partials/mixins';
+
+.delete {
+    @include delete-btn;
+}

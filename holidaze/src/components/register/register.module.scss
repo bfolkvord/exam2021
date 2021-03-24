@@ -1,0 +1,67 @@
+@import '../../sass/partials/variables';
+@import '../../sass/partials/mixins';
+
+.register {
+    margin-top: 80px;
+    @include flex-column;
+}
+
+.form {
+    width: 40%;
+    padding: 24px;
+    margin: 32px 0;
+    background-color: $light-grey;
+}
+
+.input {
+    margin: 32px 0;
+}
+
+.label {
+    font-family: $text-font;
+}
+
+.passwordVisibility {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 8px;
+    font-family: $text-font;
+}
+
+.showPassword {
+    background-color: transparent !important;
+    color: $grey12;
+    border: none;
+
+    &:hover {
+        text-decoration: underline;
+        color: $grey12;
+    }
+
+    &:active {
+        color: $grey12;
+        background-color: transparent;
+    }
+}
+
+.btnContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.btn {
+    padding: 8px 16px;
+    @include clay-btn;
+}
+
+@media (max-width: 992px) {
+    .register {
+        margin-top: 56px;
+    }
+
+    .form {
+        width: 90%;
+    }
+}

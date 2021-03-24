@@ -1,0 +1,14 @@
+@import '../../sass/partials/variables';
+
+.btn {
+    border: none;
+    font-family: $text-font;
+    font-size: 1.1rem;
+    box-shadow: $box-shadow-btn;
+    transition: transform 0.5s;
+
+    &:hover {
+        transform: scale(1.1);
+        background-color: #dc3545;
+    }
+}

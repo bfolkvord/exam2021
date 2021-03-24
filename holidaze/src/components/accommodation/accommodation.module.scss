@@ -1,0 +1,26 @@
+@import '../../sass/partials/variables';
+@import '../../sass/partials/mixins';
+
+.hotels {
+    margin: 40px auto;
+    @include flex-column;
+}
+
+.content {
+    margin-top: 32px;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.noMatch {
+    margin: 40px auto;
+    font-size: 1.5rem;
+    width: 60%;
+    text-align: center;
+}

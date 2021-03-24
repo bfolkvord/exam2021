@@ -1,0 +1,92 @@
+@import '../../sass/partials/variables';
+@import '../../sass/partials/mixins';
+
+.contact {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../../img/bg.jpg');
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin: auto 0;
+}
+
+.contactInfo {
+    width: 80%;
+    padding: 16px;
+    text-align: center;
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    margin-top: 32px;
+}
+
+.label {
+    font-family: $text-font;
+}
+
+.contactFormBtn {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.submitBtn {
+    margin-top: 16px;
+    @include blue-btn;
+}
+
+@media (max-width: 765px) {
+    .contact {
+        width: 100%;
+        background-image: none;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .column {
+        width: 100%;
+        margin: 48px auto;
+    }
+
+    .contactForm {
+        width: 90%;
+    }
+}
+
+@media (min-width: 766px) and (max-width: 1025px) {
+    .contact {
+        width: 100%;
+        background-image: none;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .column {
+        width: 70%;
+        margin: 48px auto;
+        padding: 32px;
+        background-color: $light-grey;
+        box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.2);
+        border-radius: 8px;
+    }
+
+    .contactForm {
+        width: 80%;
+    }
+}

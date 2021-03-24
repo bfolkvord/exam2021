@@ -1,0 +1,19 @@
+@import '../../sass/partials/mixins';
+
+.container {
+    padding: 48px 0;
+    @include flex-column;
+}
+
+.hotels {
+    @include flex-row;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+@media (max-width: 992px) {
+    .hotels {
+        width: 90%;
+    }
+}

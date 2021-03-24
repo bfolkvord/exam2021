@@ -1,0 +1,85 @@
+@import '../../sass/partials/variables';
+
+.filter {
+    background-color: $light-grey;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 16px 24px;
+    margin-top: 48px;
+}
+
+.form {
+    width: 100%;
+    margin-top: 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.label {
+    font-family: $text-font;
+}
+
+.input {
+    width: 30%;
+    margin: 0 8px;
+}
+
+.slider {
+    display: flex;
+    flex-direction: row;
+}
+
+.output {
+    margin-left: 8px;
+}
+
+.catering {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+}
+
+.radio {
+    display: flex;
+    flex-direction: row;
+}
+
+.reset {
+    margin-left: 24px;
+    background-color: #6d6d6d;
+    box-shadow: $box-shadow-btn;
+    border: none;
+
+    &:hover {
+        background-color: #585858;
+        border: none;
+    }
+
+    &:active {
+        background-color: #6d6d6d !important;
+        border: none;
+    }
+}
+
+@media (max-width: 992px) {
+    .form {
+        flex-direction: column;
+    }
+
+    .input {
+        width: 90%;
+        margin: 8px auto;
+    }
+
+    .catering {
+        margin: 8px auto;
+    }
+
+    .reset {
+        margin: 24px auto;
+    }
+}

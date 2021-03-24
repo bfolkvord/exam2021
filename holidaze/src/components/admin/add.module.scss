@@ -1,0 +1,70 @@
+@import '../../sass/partials/variables';
+@import '../../sass/partials/mixins';
+
+.container {
+    padding: 48px 0;
+    min-height: 100vh;
+    @include flex-column;
+}
+
+.form {
+    width: 60%;
+    margin: 32px 0;
+}
+
+.label {
+    font-family: $text-font;
+}
+
+.input {
+    margin-top: 16px;
+}
+
+.btnContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.reset {
+    background-color: #6d6d6d;
+    border-color: #6d6d6d;
+    font-family: $text-font;
+    color: $white;
+    font-size: 1.1rem;
+    transition: transform 0.5s;
+    margin: 16px 8px 0 0;
+    box-shadow: $box-shadow-btn;
+
+    &:hover {
+        transform: scale(1.05);
+        background-color: #6d6d6d;
+        border-color: #6d6d6d;
+        color: $white;
+    }
+
+    &:active {
+        background-color: #6d6d6d !important;
+        border-color: #6d6d6d !important;
+        color: $white;
+    }
+}
+
+.btn {
+    margin-top: 16px;
+    @include blue-btn;
+}
+
+@media (max-width: 992px) {
+    .form {
+        width: 90%;
+    }
+    .btnContainer {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .reset {
+        margin: 16px 0;
+    }
+}

@@ -1,0 +1,44 @@
+@import '../../sass/partials/variables';
+@import '../../sass/partials/mixins';
+
+.dashboard {
+    padding-top: 48px;
+    margin: 0 auto;
+    min-height: 100vh;
+    @include flex-column;
+}
+
+.links {
+    @include flex-row;
+    width: 100%;
+    margin-top: 32px;
+    padding: 0;
+
+    a {
+        width: 30%;
+        margin: 0 16px;
+        text-decoration: none;
+    }
+}
+
+.btn {
+    padding: 8px 24px;
+    width: 100%;
+    @include clay-btn;
+}
+
+@media (max-width: 992px) {
+    .links {
+        flex-direction: column;
+
+        a {
+            width: 100%;
+            margin: 0;
+        }
+    }
+
+    .btn {
+        margin-bottom: 24px;
+        width: 100%;
+    }
+}

@@ -1,0 +1,136 @@
+@import '../../sass/partials/variables';
+@import '../../sass/partials/mixins';
+
+.container {
+    margin: 48px auto;
+    @include flex-column;
+
+    .description {
+        text-align: center;
+        margin-top: 24px;
+    }
+
+    .content {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 32px;
+        padding: 0;
+        background: rgba(230, 229, 229, 0.702);
+        box-shadow: 0 8px 8px 0 rgba(25, 25, 26, 0.369);
+        backdrop-filter: blur(3.5px);
+        -webkit-backdrop-filter: blur(3.5px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+
+        .image {
+            max-height: 400px;
+            width: 50%;
+        }
+
+        .map {
+            width: 100%;
+            background: transparent url('../../img/loading.jpg') no-repeat center;
+        }
+
+        .media {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+    }
+
+    .info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 16px;
+    }
+
+    .infoGroup {
+        @include flex-column;
+        padding: 16px;
+
+        .icon {
+            width: 40px;
+            height: 40px;
+            fill: $grey12;
+            margin-bottom: 8px;
+        }
+    }
+
+    .reviewContainer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 32px;
+        justify-content: center;
+    }
+
+    .review {
+        width: 30%;
+        border: 1px solid #808080;
+        border-radius: 8px;
+        padding: 24px;
+        margin: 8px;
+
+        h2 {
+            font-family: $heading-font;
+        }
+    }
+
+    .buttonContainer {
+        text-decoration: none;
+        border-color: $blue;
+        width: 100%;
+        margin: 8px 0 16px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        .button {
+            width: 30%;
+            padding: 8px 24px;
+            @include blue-btn;
+            font-size: 1.4rem;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        .content {
+            display: flex;
+            flex-direction: column;
+
+            .image {
+                width: 100%;
+            }
+
+            .map {
+                width: 100%;
+            }
+
+            .media {
+                width: 100%;
+                flex-direction: column;
+            }
+
+            .info {
+                flex-direction: column;
+            }
+
+            .button {
+                width: 90%;
+            }
+        }
+
+        .reviewContainer {
+            flex-direction: column;
+        }
+
+        .review {
+            width: 100%;
+            margin: 8px 0;
+        }
+    }
+}

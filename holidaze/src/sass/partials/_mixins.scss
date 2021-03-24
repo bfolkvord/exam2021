@@ -1,0 +1,68 @@
+@import './variables';
+
+@mixin display-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-row {
+    @include display-flex();
+    flex-direction: row;
+}
+
+@mixin flex-column {
+    @include display-flex();
+    flex-direction: column;
+}
+
+@mixin delete-btn {
+    border: none;
+    font-family: $text-font;
+    font-size: 1.1rem;
+    box-shadow: $box-shadow-btn;
+
+    &:hover {
+        background-color: #a81f2c;
+    }
+}
+
+@mixin blue-btn {
+    background-color: $blue;
+    font-family: $text-font;
+    font-size: 1.1rem;
+    border: none;
+    transition: transform 0.5s;
+    box-shadow: $box-shadow-btn;
+
+    &:hover {
+        background-color: $blue;
+        border: none;
+        transform: scale(1.05);
+        text-decoration: none;
+    }
+
+    &:active {
+        background-color: $blue !important;
+    }
+}
+
+@mixin clay-btn {
+    background-color: $clay;
+    font-family: $text-font;
+    font-size: 1.1rem;
+    border: none;
+    transition: transform 0.5s;
+    box-shadow: $box-shadow-btn;
+
+    &:hover {
+        background-color: $clay;
+        border: none;
+        transform: scale(1.05);
+        text-decoration: none;
+    }
+
+    &:active {
+        background-color: $clay !important;
+    }
+}
